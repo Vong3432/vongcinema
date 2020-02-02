@@ -1,38 +1,427 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600,700&display=swap');
+/* 
+    TOC
+    =============================
+    1. Default setup
+    2. Navbar    
+    3. Home.js
+    =============================
+*/
+
+/* 1. Default setup */
+:root {
+  --primary-color: #D26A3E !important;
+  --dark: #14131A !important;
+  --light-grey: #4B485A !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--dark) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  font-size: 16px !important;  
+  font-family: 'Josefin Sans', sans-serif !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+h1{ font-size: 4rem !important; }
+h2{ font-size: 3.5rem !important; }
+h3{ font-size: 3rem !important; }
+h4{ font-size: 2.5rem !important; }
+h5{ font-size: 2rem !important; }
+h6{ font-size: 1.5rem !important; }
+
+
+h1,h2,h3,h4,h5,h6 {  
+  font-weight: 700 !important;
+}
+
+.primaryBtn-bg {
+  padding: .5em !important;
+  border: 2px solid transparent !important;
+  background: var(--primary-color) !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+
+  display: flex !important;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.primaryBtn--outline {
+  padding: .5em !important;
+  border: 2px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  background: transparent !important;
+  padding: 0 1.5em !important;
+  height: 48px !important;
+
+  display: flex !important;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.primaryBtn-bg:hover {
+  background: transparent !important;  
+  border: 2px solid var(--primary-color) !important;
+}
+
+.primaryBtn--outline:hover {
+  background: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
+.icon {
+  width: 15px !important;
+  height: 15px !important;
+  object-fit: contain !important;
+  border-radius: 0px !important;    
+  opacity: .25;
+}
+
+a {  
+  font-weight: 600 !important;
+  color: var(--dark) !important;
+}
+
+section {
+  display: flex !important;
+  flex-flow: column;
+  padding: 5em 0;
+}
+
+button {
+  border: none !important;
+}
+
+.container {
+  max-width: 1200px !important;  
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;  
+}
+
+input {
+  border: none !important;
+  border-radius: 7px;
+  color: #ffffff !important;
+  height: 48px !important;
+  background: var(--light-grey) !important;  
+}
+
+/* 2. Navbar */
+.navbar {
+  padding: 2em 0 !important;
+  background-color: var(--dark) !important;
+}
+
+.active {
+  border-bottom: 2px solid var(--primary-color) !important;
+  opacity: 1 !important;
+}
+
+.nav-item
+{
+  margin-left: 1em;
+}
+
+.nav-link {  
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  opacity: .5;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid var(--primary-color) !important;  
+}
+
+.navbar input {
+  max-width: 300px;  
+}
+
+/* 3. Home.js */ 
+.hero-section {
+  min-height: 70vh;
+
+  color: #ffffff !important;
+
+  background-image: url(/assets/images/herobg.png);  
+  background-color: rgba(20, 19, 26,.8);
+  background-blend-mode: overlay;
+  background-position: center 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  text-transform: uppercase;
+
+  align-items: center;
+  justify-content: center !important;
+}
+
+.hero-content {
+  width: 50% !important;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.hero-title {  
+  margin-top: .75em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.hero-subtitle {
+  opacity: .7;  
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+}
+
+.hero-subdescription {
+  font-weight: 400 !important;
+  opacity: .5;
+}
+
+.category-section {  
+  color: #fff;
+}
+
+.movie-slider-container {  
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;    
+  /* background: rgba(12, 10, 10, .75); */
+  /* padding: 2em; */  
+
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.movie-slider-container > .hero-title {
+  margin: 1em 0;  
+}
+
+.movie-slider-innercontainer {
+  display: flex;  
+  overflow-x: auto;  
+  max-width: 100%;
+  width: 100%;        
+
+  /* padding: 0 1em; */
+}
+
+.movie-slider-innercontainer::-webkit-scrollbar, .video-list::-webkit-scrollbar-scrollbar {  
+  height: .3em !important;
+}
+
+.movie-slider-innercontainer::-webkit-scrollbar-thumb, .video-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  outline: .25px solid slategrey !important;
+}
+
+.movie-slider-item {
+  display: flex;  
+  flex-flow: column;  
+  
+  max-width: 154px !important;
+  width: 100%;
+
+  padding: 1em 0;
+  margin: 0 2em 0 0;  
+}
+
+.movie-slider-item > img {
+  height: 250px;
+  border-radius: 5px;
+  border: 2px solid #e2e2e2;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.8);
+  /* z-index: 10; */
+}
+
+.movie-slider-item-header {
+  margin: 1em 0 0 0;
+  /* min-height: 70px; */
+  margin-bottom: .75em;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movie-slider-item-header .hero-title {
+  font-size: .9rem !important;  
+  color: #ffffff !important;  
+}
+
+.movie-slider-item-header .hero-title:hover {
+  color: var(--primary-color) !important;
+}
+
+.movie-slider-item-releaseDate, .movie-slider-item-rating, .movie-slider-item-description{
+  text-transform: uppercase;
+  font-size: .75rem !important;  
+  opacity: .75;  
+}
+
+.btn-left, .btn-right {
+  position: absolute;
+  top: 45%;
+
+  background-color: rgba(0,0,0,.85);
+  padding: 1em;
+  color: var(--primary-color);  
+}
+
+.btn-left {
+  left: 0;
+}
+
+.btn-left::before {
+  content: '<';
+  font-weight: bold;
+}
+
+.btn-right {
+  right: 0;
+}
+
+.btn-right::before {
+  content: '>';
+  font-weight: bold;
+}
+
+/* 4. Detail.js */
+.movie-detail-innercontainer {
+  display: flex;
+  flex-flow: row;  
+}
+
+.movie-detail-poster {
+  width: 40%;
+}
+
+.movie-detail-content {
+  color: #ffffff;
+  padding: 0 2em;
+  width: 60%;
+}
+
+.movie-detail-header {
+  display: flex;
+  flex-flow: column;
+
+  margin-bottom: 1.5em;
+}
+
+.movie-detail-column {
+  display: flex;
+  flex-flow: column;
+  margin: 1.5em 0;  
+}
+
+.movie-detail-content b {
+  opacity: .65;
+}
+
+.movie-detail-column span, .movie-tagline, .movie-rating, .movie-overview, .movie-runtime, .movie-status {
+  opacity: .4;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.movie-tagline {
+  font-size: 1.2rem !important;  
+  margin-top: .5em;
+  margin-bottom: 7px;
+}
+
+
+.company-logo {
+  object-fit: contain;  
+  background: #fff;
+  padding: .5em;
+  margin-right: 5px;
+}
+
+.video-section {
+  /* background: rgb(11, 12, 15); */
+}
+
+.similar-movie-section {
+  background: rgb(32, 32, 30);
+}
+
+.recommended-movie-section {
+  background: linear-gradient(to right bottom, rgb(151, 9, 33), rgb(26, 2, 29));
+}
+
+.video-section .movie-slider-container, .similar-movie-section .movie-slider-container, .recommended-movie-section .movie-slider-container {
+  margin-bottom: 0;  
+}
+
+.video-section, .recommended-movie-section, .similar-movie-section {
+  padding: 4em 0;  
+  color: #ffffff;
+}
+
+.video-section .hero-title{
+  /* border-left: 5px solid rgb(0, 128, 21);
+  padding-left: .5em; */
+  border-left: 3px solid rgb(86, 110, 29);
+  padding-left: .5em;  
+  margin-top: 0;  
+  margin-bottom: .5em;
+}
+
+.video-list {
+  display: flex;    
+  flex-flow: row wrap;  
+  justify-content: flex-start;
+  justify-items: center;  
+  /* overflow: auto; */
+}
+
+.video {    
+  border: none;
+  width: 24%;
+  height: 150px;
+  margin: 5px;
+}
+
+.video:hover {
+  border: 2px solid var(--primary-color);  
+  transition: border 100ms ease-out;
+}
+
+.video-list::-webkit-scrollbar-scrollbar {  
+  height: .15em !important;
+}
+
+.video-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  outline: .25px solid slategrey !important;
+}
+
+
+@media screen and (max-width:780px) {
+  .container {
+    padding: 0 2em !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .movie-detail-innercontainer {   
+    flex-flow: column;
   }
+
+  .movie-detail-poster {
+    width: 100%;
+  }
+
+  .movie-detail-content {    
+    padding: 2em 0;
+  }
+
+  .video {
+    width: 100%;
+    height: 250px;
+  }
+
 }
