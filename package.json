@@ -16,7 +16,10 @@
     "react-scripts": "3.3.0",
     "reactstrap": "^8.4.0"
   },
+  "homepage": "http://vong3432.github.io/vongcinema",  
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
