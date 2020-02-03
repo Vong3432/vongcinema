@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vongcinema/static/css/main.7d8d710c.chunk.css",
+    "main.css": "/vongcinema/static/css/main.2a01bba0.chunk.css",
     "main.js": "/vongcinema/static/js/main.f88d6a36.chunk.js",
     "main.js.map": "/vongcinema/static/js/main.f88d6a36.chunk.js.map",
     "runtime-main.js": "/vongcinema/static/js/runtime-main.832b33a6.js",
@@ -9,18 +9,19 @@
     "static/js/2.4c89d7f0.chunk.js": "/vongcinema/static/js/2.4c89d7f0.chunk.js",
     "static/js/2.4c89d7f0.chunk.js.map": "/vongcinema/static/js/2.4c89d7f0.chunk.js.map",
     "index.html": "/vongcinema/index.html",
-    "precache-manifest.1ec2427ad030a829428518041cdde0b9.js": "/vongcinema/precache-manifest.1ec2427ad030a829428518041cdde0b9.js",
+    "precache-manifest.dae9b0f50a92308121d88e3c5a048a42.js": "/vongcinema/precache-manifest.dae9b0f50a92308121d88e3c5a048a42.js",
     "service-worker.js": "/vongcinema/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/vongcinema/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.7d8d710c.chunk.css.map": "/vongcinema/static/css/main.7d8d710c.chunk.css.map",
+    "static/css/main.2a01bba0.chunk.css.map": "/vongcinema/static/css/main.2a01bba0.chunk.css.map",
     "static/js/2.4c89d7f0.chunk.js.LICENSE": "/vongcinema/static/js/2.4c89d7f0.chunk.js.LICENSE",
+    "static/media/App.css": "/vongcinema/static/media/herobg.84428d81.png",
     "static/media/logo.svg": "/vongcinema/static/media/logo.ee7cd8ed.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.832b33a6.js",
     "static/css/2.47e06e2e.chunk.css",
     "static/js/2.4c89d7f0.chunk.js",
-    "static/css/main.7d8d710c.chunk.css",
+    "static/css/main.2a01bba0.chunk.css",
     "static/js/main.f88d6a36.chunk.js"
   ]
 }
