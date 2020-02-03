@@ -146,7 +146,7 @@ input {
 
   color: #ffffff !important;
 
-  background-image: url(/assets/images/herobg.png);  
+  background-image: url(./images/herobg.png);  
   background-color: rgba(20, 19, 26,.8);
   background-blend-mode: overlay;
   background-position: center 10px;

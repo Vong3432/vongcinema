@@ -65,7 +65,7 @@ const Home = () => {
                         <strong className="hero-subdescription">the world need a hero, <br />they got a guy</strong>
                         <h3 className="hero-title">Free guy</h3>
                         <h6 className="hero-subtitle">july 3</h6>
-                        <Button className="primaryBtn-bg"><img style={{ width: "20px", height: "20px" }} src="/assets/images/play.svg" /><div style={{ marginTop: "5px" }}>watch trailer</div></Button>
+                        <Button className="primaryBtn-bg"><img style={{ width: "20px", height: "20px" }} alt="hero" src={process.env.PUBLIC_URL + "/assets/images/play.svg"} /><div style={{ marginTop: "5px" }}>watch trailer</div></Button>
                     </div>
                 </div>
             </section>
