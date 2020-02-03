@@ -191,8 +191,7 @@ input {
   max-width: 100%;
   width: 100%;    
   /* background: rgba(12, 10, 10, .75); */
-  /* padding: 2em; */  
-
+  /* padding: 2em; */    
   position: relative;
   margin-bottom: 2em;
 }
@@ -206,7 +205,7 @@ input {
   overflow-x: auto;  
   max-width: 100%;
   width: 100%;        
-
+  
   /* padding: 0 1em; */
 }
 

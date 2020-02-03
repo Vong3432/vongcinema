@@ -3,9 +3,34 @@ import MovieItem from './MovieItem'
 
 const MovieList = ({ movielist, type }) => {
 
+    // const [ movingDirection, setMovingDirection ] = useState("")    
     const scrollSlider = (section, direction) => {
         const slider = document.querySelector(`.${section}`);
-        direction === "left" ? slider.scrollLeft -= 200 : slider.scrollLeft += 200
+
+        switch(direction) {
+            case "left":                
+                // slider.classList.add('slide-left')                
+                var scrollAmount = 0;
+                var slideTimer = setInterval(function(){
+                    slider.scrollLeft -= 10;
+                    scrollAmount += 10;
+
+                    if( scrollAmount >= slider.clientWidth )
+                        window.clearInterval(slideTimer)
+                }, 3)
+                break;
+                
+            case "right":
+                var scrollAmount = 0;
+                var slideTimer = setInterval(function(){
+                    slider.scrollLeft += 10;
+                    scrollAmount += 10;
+
+                    if( scrollAmount >= slider.clientWidth )
+                        window.clearInterval(slideTimer)
+                }, 3)
+                break;
+        }    
     }
 
     return (

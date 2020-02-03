@@ -28,21 +28,21 @@ const TopBar = () => {
         <div>
             <Navbar expand="md">
                 <Container>
-                    <NavbarBrand href="/"><img src="/assets/images/logo.svg" alt="logo" /></NavbarBrand>
+                    <NavbarBrand href={process.env.PUBLIC_URL + '/'}><img src={process.env.PUBLIC_URL + "/assets/images/logo.svg"} alt="logo" /></NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
-                                <NavLink tag={RRNavLink} exact to="/">home</NavLink>
+                                <NavLink tag={RRNavLink} exact to={process.env.PUBLIC_URL + '/'}>home</NavLink>
                             </NavItem>             
                             <NavItem>
-                                <NavLink tag={RRNavLink} exact to="/movie">movie</NavLink>
+                                <NavLink tag={RRNavLink} exact to={process.env.PUBLIC_URL + '/movie'}>movie</NavLink>
                             </NavItem>             
                             <NavItem>
-                                <NavLink tag={RRNavLink} exact to="/news">news</NavLink>
+                                <NavLink tag={RRNavLink} exact to={process.env.PUBLIC_URL + '/news'}>news</NavLink>
                             </NavItem>                          
                             <NavItem>
-                                <NavLink tag={RRNavLink} exact to="/contact">contact</NavLink>
+                                <NavLink tag={RRNavLink} exact to={process.env.PUBLIC_URL + '/contact'}>contact</NavLink>
                             </NavItem>               
                         </Nav>                        
                         <Input className="ml-sm-auto mr-2" type="text" placeholder="Search keywords..." />
