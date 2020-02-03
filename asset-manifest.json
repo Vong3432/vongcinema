@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/vongcinema/static/css/main.52c6c8cf.chunk.css",
-    "main.js": "/vongcinema/static/js/main.0c83d0c9.chunk.js",
-    "main.js.map": "/vongcinema/static/js/main.0c83d0c9.chunk.js.map",
+    "main.js": "/vongcinema/static/js/main.f88d6a36.chunk.js",
+    "main.js.map": "/vongcinema/static/js/main.f88d6a36.chunk.js.map",
     "runtime-main.js": "/vongcinema/static/js/runtime-main.832b33a6.js",
     "runtime-main.js.map": "/vongcinema/static/js/runtime-main.832b33a6.js.map",
     "static/css/2.47e06e2e.chunk.css": "/vongcinema/static/css/2.47e06e2e.chunk.css",
     "static/js/2.4c89d7f0.chunk.js": "/vongcinema/static/js/2.4c89d7f0.chunk.js",
     "static/js/2.4c89d7f0.chunk.js.map": "/vongcinema/static/js/2.4c89d7f0.chunk.js.map",
     "index.html": "/vongcinema/index.html",
-    "precache-manifest.d807c86abff37cbafb2fc88ecd67f6df.js": "/vongcinema/precache-manifest.d807c86abff37cbafb2fc88ecd67f6df.js",
+    "precache-manifest.4a87d9a5a13dd9c42e624d2330c78bdb.js": "/vongcinema/precache-manifest.4a87d9a5a13dd9c42e624d2330c78bdb.js",
     "service-worker.js": "/vongcinema/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/vongcinema/static/css/2.47e06e2e.chunk.css.map",
     "static/css/main.52c6c8cf.chunk.css.map": "/vongcinema/static/css/main.52c6c8cf.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.47e06e2e.chunk.css",
     "static/js/2.4c89d7f0.chunk.js",
     "static/css/main.52c6c8cf.chunk.css",
-    "static/js/main.0c83d0c9.chunk.js"
+    "static/js/main.f88d6a36.chunk.js"
   ]
 }
