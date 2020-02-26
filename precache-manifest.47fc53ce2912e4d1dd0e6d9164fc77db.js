@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "faec64873b1431db519ecf0f30fa292b",
+    "revision": "aac089ff1053fae238555d56405af5ce",
     "url": "/vongcinema/index.html"
   },
   {
-    "revision": "3e6dce152b6900a4ed09",
+    "revision": "a3f44404392ba91fde1e",
     "url": "/vongcinema/static/css/2.47e06e2e.chunk.css"
   },
   {
-    "revision": "99640f80c2231698ed04",
+    "revision": "d9fea0ae9c6a9ba187ca",
     "url": "/vongcinema/static/css/main.f0e79fde.chunk.css"
   },
   {
-    "revision": "3e6dce152b6900a4ed09",
-    "url": "/vongcinema/static/js/2.419ca3b3.chunk.js"
+    "revision": "a3f44404392ba91fde1e",
+    "url": "/vongcinema/static/js/2.98f92f4e.chunk.js"
   },
   {
     "revision": "86afaa925e0f432774bf95b19b6933fb",
-    "url": "/vongcinema/static/js/2.419ca3b3.chunk.js.LICENSE"
+    "url": "/vongcinema/static/js/2.98f92f4e.chunk.js.LICENSE"
   },
   {
-    "revision": "99640f80c2231698ed04",
-    "url": "/vongcinema/static/js/main.5a0e0144.chunk.js"
+    "revision": "d9fea0ae9c6a9ba187ca",
+    "url": "/vongcinema/static/js/main.76dd5574.chunk.js"
   },
   {
     "revision": "528e06870611b7e9ff5e",
