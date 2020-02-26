@@ -18,11 +18,11 @@ function App() {
       <Router basename={'/vongcinema'}>    
         <TopBar />
         <Switch>
-          <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
-          <Route path={process.env.PUBLIC_URL + '/movie'} exact component={Movie} />
-          <Route path={process.env.PUBLIC_URL + '/news'} exact component={News} />
-          <Route path={process.env.PUBLIC_URL + '/contact'} exact component={Contact} />
-          <Route path={process.env.PUBLIC_URL + "/m/:movieid"} component={Detail} />
+          <Route path='/' exact component={Home} />
+          <Route path='/movie' exact component={Movie} />
+          <Route path='/news' exact component={News} />
+          <Route path='/contact' exact component={Contact} />
+          <Route path="/m/:movieid" component={Detail} />
         </Switch>
       </Router>
     </div>
