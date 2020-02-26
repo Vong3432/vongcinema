@@ -15,14 +15,14 @@ function App() {
 
   return (
     <div className="App">
-      <Router>    
+      <Router basename={'/vongcinema'}>    
         <TopBar />
         <Switch>
           <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
           <Route path={process.env.PUBLIC_URL + '/movie'} exact component={Movie} />
           <Route path={process.env.PUBLIC_URL + '/news'} exact component={News} />
           <Route path={process.env.PUBLIC_URL + '/contact'} exact component={Contact} />
-          <Route path={process.env.PUBLIC_URL + "/m/:movieid"} exact component={Detail} />
+          <Route path={process.env.PUBLIC_URL + "/m/:movieid"} component={Detail} />
         </Switch>
       </Router>
     </div>
