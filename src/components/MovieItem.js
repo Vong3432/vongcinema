@@ -9,7 +9,7 @@ const MovieItem = ({ id, title, poster_path, release_date, vote_average, origina
             <img src={"http://image.tmdb.org/t/p/w154/" + poster_path} />
 
             <div className="movie-slider-item-header">
-                <NavLink className="hero-title" to={process.env.PUBLIC_URL + `/m/${id}`}>{title}</NavLink>
+                <NavLink className="hero-title" to={`/m/${id}`}>{title}</NavLink>
             </div>
 
             <div className="d-flex align-items-center">
