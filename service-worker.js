@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vongcinema/precache-manifest.71e48c383bad42010f0091c710a7ec62.js"
+  "/vongcinema/precache-manifest.dcb151b70a9d66f18c8dcf63e17c7e35.js"
 );
 
 self.addEventListener('message', (event) => {
