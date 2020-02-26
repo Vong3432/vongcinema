@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TopBar from './components/TopBar';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { HashRouter as Router, Switch, Route} from 'react-router-dom'
 
 // Pages
 import Home from './pages/Home'
