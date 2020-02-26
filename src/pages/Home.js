@@ -3,6 +3,7 @@ import { Button, Spinner, Nav } from 'reactstrap'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import MovieList from '../components/MovieList'
+import { fetchMovie } from '../api/FetchMovie';
 
 const Home = () => {
 
@@ -22,39 +23,27 @@ const Home = () => {
 
 
     const fetchNowPlayingMovies = () => {
-
-        axios
-            .get('https://api.themoviedb.org/3/movie/now_playing?api_key=26b58a5dfb2cc4733f2edd50edd8a201')
-            .then(res => setNowPlayingMovies(res.data))
-            .catch(err => console.log(err));
-
+        fetchMovie('now_playing')
+            .then(data => setNowPlayingMovies(data))
+            .catch(err => console.log(err))
     }
 
     const fetchPopularMovies = () => {
-
-        axios
-            .get('https://api.themoviedb.org/3/movie/popular?api_key=26b58a5dfb2cc4733f2edd50edd8a201')
-            .then(res => setPopularMovies(res.data))
-            .catch(err => console.log(err));
-
+        fetchMovie('popular')
+            .then(data => setPopularMovies(data))
+            .catch(err => console.log(err))
     }
 
     const fetchTopRatedMovies = () => {
-
-        axios
-            .get('https://api.themoviedb.org/3/movie/top_rated?api_key=26b58a5dfb2cc4733f2edd50edd8a201')
-            .then(res => setTopRatedMovies(res.data))
-            .catch(err => console.log(err));
-
+        fetchMovie('top_rated')
+            .then(data => setTopRatedMovies(data))
+            .catch(err => console.log(err))
     }
 
     const fetchUpcomingMovies = () => {
-
-        axios
-            .get('https://api.themoviedb.org/3/movie/upcoming?api_key=26b58a5dfb2cc4733f2edd50edd8a201')
-            .then(res => setUpComingMovies(res.data))
-            .catch(err => console.log(err));
-
+        fetchMovie('upcoming')
+            .then(data => setUpComingMovies(data))
+            .catch(err => console.log(err))        
     }
 
     return (
@@ -71,32 +60,32 @@ const Home = () => {
             </section>
 
             <section className="category-section">
-                <div className="container">                    
-                    <div className="movie-slider-container" >                                                    
-                    <h6 className="hero-title">Now Playing</h6>
-                        {nowPlayingMovies ? <MovieList type="nowplaying" movielist={nowPlayingMovies} /> : <Spinner />}                        
+                <div className="container">
+                    <div className="movie-slider-container" >
+                        <h6 className="hero-title">Now Playing</h6>
+                        {nowPlayingMovies ? <MovieList type="nowplaying" movielist={nowPlayingMovies} /> : <Spinner />}
                     </div>
-                    
+
                     <div className="movie-slider-container" >
                         <h6 className="hero-title">Popular</h6>
                         <div className="movie-slider-innercontainer">
-                            {popularMovies ? <MovieList type="popular" movielist={popularMovies} /> : <Spinner />}                                                    
+                            {popularMovies ? <MovieList type="popular" movielist={popularMovies} /> : <Spinner />}
                         </div>
 
                     </div>
-                    
+
                     <div className="movie-slider-container" >
                         <h6 className="hero-title">Top Rated</h6>
                         <div className="movie-slider-innercontainer">
-                            {topRatedMovies ? <MovieList type="toprated" movielist={topRatedMovies} /> : <Spinner />}                             
+                            {topRatedMovies ? <MovieList type="toprated" movielist={topRatedMovies} /> : <Spinner />}
                         </div>
 
                     </div>
-                    
+
                     <div className="movie-slider-container" >
                         <h6 className="hero-title">Upcoming</h6>
                         <div className="movie-slider-innercontainer">
-                            {upcomingMovies ? <MovieList type="upcoming" movielist={upcomingMovies} /> : <Spinner />}                             
+                            {upcomingMovies ? <MovieList type="upcoming" movielist={upcomingMovies} /> : <Spinner />}
                         </div>
 
                     </div>

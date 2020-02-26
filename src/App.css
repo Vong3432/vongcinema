@@ -400,6 +400,98 @@ input {
   outline: .25px solid slategrey !important;
 }
 
+/* 5. Movie.js */
+.movie-list {
+  display: flex;
+  flex-flow: column;
+
+  margin-top: 2em;
+  color: #ffffff;
+  width: 80%;
+}
+
+.movie-list__column {
+  border-radius: 7px;
+  /* background:linear-gradient(to right bottom, rgb(136, 14, 45), rgb(224, 149, 78)); */
+  background: rgb(34, 32, 46);
+  padding: 1.5em;  
+  margin: 1em 0;
+  
+  animation: columnOnLeave 100ms ease-in forwards;
+}
+
+.movie-list__column:hover {    
+  cursor: pointer;
+  animation: columnOnHover 100ms ease-out 50ms forwards;
+}
+
+.movie-list__column:hover .movie-list__column-poster {
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.8);  
+  
+}
+
+@keyframes columnOnHover {
+  from {
+    transform: scale(1);
+    background: rgb(34, 32, 46);
+  }
+  to {
+    transform: scale(1.02);
+    background: linear-gradient(to right bottom, rgb(34, 32, 46), rgba(255, 0, 76, 0.438));
+  }  
+}
+
+@keyframes columnOnLeave {
+  from {
+    transform: scale(1.02);
+    background: linear-gradient(to right bottom, rgb(34, 32, 46), rgba(255, 0, 76, 0.438));
+  }
+  to {
+    transform: scale(1);
+    background: rgb(34, 32, 46);    
+  }  
+}
+
+.movie-list__column-container {
+  display: flex;
+}
+
+.movie-list__column-poster {
+  border: 2px solid #e2e2e2;
+  /* width: 100%;
+  height: 100%; */
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: cover;    
+}
+
+
+.movie-list__column-description {
+  opacity: .5;
+  padding-bottom: .5em;
+  
+  max-width: 1400px;
+  font-family: Arial, Helvetica, sans-serif !important;    
+}
+
+.movie-list__column-info {
+  padding: 0 1.5em;    
+
+  display: flex;
+  flex-flow: column;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: auto;
+}
+
+
+.movie-list__column-info .movie-slider-item-releaseDate, 
+.movie-list__column-info .movie-slider-item-rating,
+.movie-list__column-info .movie-slider-item-description {
+  font-size: 1rem !important;
+}
 
 @media screen and (max-width:780px) {
   .container {
@@ -423,4 +515,28 @@ input {
     height: 250px;
   }
 
+
+}
+
+@media screen and ( max-width: 480px ) {
+  .movie-list {
+    width: 100%;
+  }
+
+  .movie-list__column-container {
+    flex-flow: column;
+  }
+  
+  .movie-list__column-info {
+    padding: 2em 0;
+  }
+
+  .movie-list__column-poster{
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  .movie-list__column-title {
+    font-size: 1.5rem !important;
+  }
 }

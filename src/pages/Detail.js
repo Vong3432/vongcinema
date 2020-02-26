@@ -124,7 +124,7 @@ const Detail = (props) => {
                             <div className="d-flex">
 
                                 {data.production_companies.map(company => company.logo_path && (
-                                    <img className="company-logo" src={'https://image.tmdb.org/t/p/w45/' + company.logo_path} />
+                                    <img alt="logo" className="company-logo" src={'https://image.tmdb.org/t/p/w45/' + company.logo_path} />
                                 ))}
 
                             </div>

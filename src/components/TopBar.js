@@ -46,7 +46,7 @@ const TopBar = () => {
                             </NavItem>               
                         </Nav>                        
                         <Input className="ml-sm-auto mr-2" type="text" placeholder="Search keywords..." />
-                        <Button className="primaryBtn--outline mt-2 mt-sm-0">Login</Button>                        
+                        {/* <Button className="primaryBtn--outline mt-2 mt-sm-0">Login</Button>                         */}
                     </Collapse>
                 </Container>
             </Navbar>
