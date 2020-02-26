@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router basename={'/vongcinema'}>    
+      <Router>    
         <TopBar />
         <Switch>
           <Route path='/' exact component={Home} />
