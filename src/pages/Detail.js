@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react'
 import axios from 'axios'
 import { Spinner } from 'reactstrap'
-import { Key } from '../api/Key'
 import MovieList from '../components/MovieList'
+
+const Key = `${process.env.REACT_APP_KEY}`;
 
 const Detail = (props) => {
 

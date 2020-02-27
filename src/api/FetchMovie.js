@@ -1,5 +1,7 @@
 import axios from 'axios'
-import {Key} from './Key'
+
+const Key = `${process.env.REACT_APP_KEY}`;
+console.log(Key)
 
 export const fetchMovie = async (type, page = 1, language = "en-US", region = "") => {
     return axios
