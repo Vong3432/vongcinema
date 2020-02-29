@@ -33,14 +33,7 @@ const Movie = (props) => {
     useEffect(() => {        
         if (totalPages > 0)
             _createPaginationNumber()
-    }, [totalPages])
-
-    useEffect(() => {        
-                    
-        // display movies based on tag from context
-        _displayMovies(tag.tag_name, 1)        
-
-    }, [tag])
+    }, [totalPages])    
 
     useEffect(() => {        
         _displayMovies(tag.tag_name, page)
