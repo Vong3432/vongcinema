@@ -21,6 +21,7 @@ const Movie = (props) => {
     const { dispatch, tag } = useContext(FilterMovieContext)
     const keywords = useSelector(state => state.defaultState.keywords)
 
+    // Hooks
     useEffect(() => {            
         setTags(document.querySelectorAll('.tag'))                   
     }, [])
@@ -37,14 +38,15 @@ const Movie = (props) => {
     useEffect(() => {        
                     
         // display movies based on tag from context
-        _displayMovies(tag.tag_name)        
+        _displayMovies(tag.tag_name, 1)        
 
     }, [tag])
 
-    useEffect(() => {
+    useEffect(() => {        
         _displayMovies(tag.tag_name, page)
     }, [page])
 
+    // Methods
     const _displayMovies = (category, page) => {
         if (matchedResults)
             setMatchedResults([])
@@ -64,15 +66,25 @@ const Movie = (props) => {
         return elements
     }
 
+    const _changeTag = (type) => {
+        
+        // If user clicks on new tag,
+        // reset the pagination number to 1
+        if(type !== tag.tag_name)
+            props.history.push('/movie?page=1')
+
+        dispatch({ type })
+    }
+
     return (
         <>
             <div className="container">
                 <div className="movie-list">
                     <h5>Sort by:</h5>
                     <div className="d-flex mb-4 flex-sm-row flex-column">
-                        <span className={`tag ${tag.tag_index === 0 && 'tag--active'}`} onClick={() => dispatch({ type: "NOW_PLAYING" })}>Now playing</span>
-                        <span className={`tag ${tag.tag_index === 1 && 'tag--active'}`} onClick={() => dispatch({ type: "POPULAR" })}>Popular</span>
-                        <span className={`tag ${tag.tag_index === 2 && 'tag--active'}`} onClick={() => dispatch({ type: "UPCOMING" })}>Upcoming</span>
+                        <span className={`tag ${tag.tag_index === 0 && 'tag--active'}`} onClick={() => _changeTag("NOW_PLAYING")}>Now playing</span>
+                        <span className={`tag ${tag.tag_index === 1 && 'tag--active'}`} onClick={() => _changeTag("POPULAR")}>Popular</span>
+                        <span className={`tag ${tag.tag_index === 2 && 'tag--active'}`} onClick={() => _changeTag("UPCOMING")}>Upcoming</span>
                     </div>
                     {
                         matchedResults.length > 0
