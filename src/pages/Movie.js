@@ -24,11 +24,22 @@ const Movie = (props) => {
     // Hooks
     useEffect(() => {            
         setTags(document.querySelectorAll('.tag'))                   
-    }, [])
+    }, [])    
 
     useEffect(() => {
         
     }, [keywords])
+
+    useEffect(() => {
+        
+        // If user clicks on new tag,
+        // reset the pagination number to 1
+        // if(type !== tag.tag_name)
+        //     props.history.push('/movie?page=1')
+
+        _displayMovies(tag.tag_name, page)
+        
+    }, [tag])
 
     useEffect(() => {        
         if (totalPages > 0)
@@ -66,7 +77,7 @@ const Movie = (props) => {
         if(type !== tag.tag_name)
             props.history.push('/movie?page=1')
 
-        dispatch({ type })
+        dispatch({ type })                
     }
 
     return (
