@@ -114,7 +114,7 @@ const Detail = (props) => {
 
                             <div className="movie-detail-column">
                                 <b className="mr-auto">Made from</b>
-                                <div className="d-flex">
+                                <div className="d-flex flex-wrap flex-row">
                                     {data.production_countries.map(country => country && (
                                         <span>{country.name} </span>
                                     ))}
@@ -122,10 +122,10 @@ const Detail = (props) => {
                             </div>
 
 
-                            <div className="d-flex">
+                            <div className="d-flex flex-wrap">
 
                                 {data.production_companies.map(company => company.logo_path && (
-                                    <img alt="logo" className="company-logo" src={'https://image.tmdb.org/t/p/w45/' + company.logo_path} />
+                                    <img alt="logo" className="my-1 company-logo" src={'https://image.tmdb.org/t/p/w45/' + company.logo_path} />
                                 ))}
 
                             </div>

@@ -28,8 +28,8 @@ const TopBar = () => {
         <div>
             <Navbar expand="md">
                 <Container>
-                    <NavbarBrand href='/'><img src={process.env.PUBLIC_URL + "/assets/images/logo.svg"} alt="logo" /></NavbarBrand>
-                    <NavbarToggler onClick={toggle} />
+                    <NavbarBrand onClick={e => window.location.href="/"}><img src={process.env.PUBLIC_URL + "/assets/images/logo.svg"} alt="logo" /></NavbarBrand>
+                    <img className="menu" onClick={e => toggle()} src={process.env.PUBLIC_URL + "/assets/images/Menu.svg"} alt="menu"/>
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>

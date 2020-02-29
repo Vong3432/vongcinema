@@ -115,6 +115,8 @@ input {
   background-color: var(--dark) !important;
 }
 
+.menu { display: none; }
+
 .active {
   border-bottom: 2px solid var(--primary-color) !important;
   opacity: 1 !important;
@@ -372,18 +374,17 @@ input {
 }
 
 .video-list {
-  display: flex;    
-  flex-flow: row wrap;  
-  justify-content: flex-start;
-  justify-items: center;  
+  display: grid;
+  gap: 2em;    
+  padding: 1em 0; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   /* overflow: auto; */
 }
 
 .video {    
-  border: none;
-  width: 24%;
-  height: 150px;
-  margin: 5px;
+  border: none; 
+  width: 100%;   
+  height: 150px;  
 }
 
 .video:hover {
@@ -433,6 +434,34 @@ input {
 .movie-list__column:hover .movie-list__column-poster {
   box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.8);  
   
+}
+
+.tag-container {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 2em;
+}
+
+.tag--desktop, .tag--mobile {
+  display: flex;
+  flex-flow: row;
+}
+
+.tag--mobile {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 1em;
+  width: 100%;  
+  
+  background-color: var(--dark);
+}
+
+.tag--mobile span {
+  font-size: .8rem !important;
 }
 
 .tag {  
@@ -528,10 +557,59 @@ input {
   background-color: var(--primary-color);
 }
 
-@media screen and (max-width:780px) {
+@media screen and (max-width: 1024px) {
+  .tag-container { margin-bottom: 0; }
+  .tag--desktop {
+    display: none;
+  }
+
+  .movie-list {
+    padding-bottom: 7em;
+  }
+
+  .movie-list > h5 { display: none; }
+
+  .tag--mobile {
+    display: flex;    
+    justify-content: space-around;
+  }
+
+  .tag {
+    opacity: 1;
+    filter: grayscale(100%) opacity(.5);
+  }
+
+  .tag--active {
+    border: none;
+    filter: grayscale(0%);
+  }
+
+  .tag--mobile span {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .tag--mobile span svg {
+    width: 20px !important;
+    height: 20px !important;
+    margin-bottom: 10px;
+  }
+
+  .svg--secondary {   
+    fill: red !important;     
+  }
+
+}
+
+@media screen and (max-width:760px) {
+  .menu { display: block; }
+
   .container {
     padding: 0 2em !important;
   }
+
+  .movie-list {width:100%;}
 
   .movie-detail-innercontainer {   
     flex-flow: column;
@@ -541,7 +619,8 @@ input {
     width: 100%;
   }
 
-  .movie-detail-content {    
+  .movie-detail-content { 
+    width: 100%;   
     padding: 2em 0;
   }
 
