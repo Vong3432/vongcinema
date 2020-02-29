@@ -36,7 +36,7 @@ const TopBar = () => {
                                 <NavLink tag={RRNavLink} exact to='/'>home</NavLink>
                             </NavItem>             
                             <NavItem>
-                                <NavLink tag={RRNavLink} exact to='/movie'>movie</NavLink>
+                                <NavLink tag={RRNavLink} exact to='/movie?page=1'>movie</NavLink>
                             </NavItem>             
                             <NavItem>
                                 <NavLink tag={RRNavLink} exact to='/news'>news</NavLink>
