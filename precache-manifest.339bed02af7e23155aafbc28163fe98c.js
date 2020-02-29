@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4bea96acf9b2e862d871fe24150b52c7",
+    "revision": "f561145b30f2f6ddd1b4b7199da286bd",
     "url": "/vongcinema/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vongcinema/static/css/2.47e06e2e.chunk.css"
   },
   {
-    "revision": "c1b77715b21ea70e5533",
+    "revision": "95cd91f87a7f65d7a623",
     "url": "/vongcinema/static/css/main.b4e85fc0.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vongcinema/static/js/2.3b691efc.chunk.js.LICENSE"
   },
   {
-    "revision": "c1b77715b21ea70e5533",
-    "url": "/vongcinema/static/js/main.deb8d04e.chunk.js"
+    "revision": "95cd91f87a7f65d7a623",
+    "url": "/vongcinema/static/js/main.d097a9d2.chunk.js"
   },
   {
     "revision": "528e06870611b7e9ff5e",
